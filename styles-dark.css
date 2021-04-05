@@ -1,0 +1,236 @@
+:root{
+    --bright-blue: hsl(220, 98%, 61%);
+    --check-background: linear-gradient( hsl(192, 100%, 67%), hsl(280, 87%, 65%) );
+    --very-dark-blue: hsl(235, 21%, 11%); /*usado*/
+    --very-dark-desaturated-blue: hsl(235, 24%, 19%); /*usado*/
+    --light-grayish-blue: hsl(234, 39%, 85%);  /*usado*/
+    --light-grayish-blue-hover: hsl(236, 33%, 92%); /*usado*/
+    --dark-grayish-blue: hsl(234, 11%, 52%); /*usado*/
+    --very-dark-grayish-blue: hsl(233, 14%, 35%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+}
+
+header{
+    width: 100%;
+    height: 293px;
+    background-image: url('./images/bg-desktop-dark.jpg');
+    background-repeat: no-repeat;
+}
+
+#header-container{
+    width: 545px;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 80px;
+
+}
+
+#header-container > h1{
+    color: white;
+    font-size: 40px;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+}
+
+section{
+    background: var(--very-dark-blue);
+}
+
+#todo{
+    width: 545px;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
+    top: -130px;
+    border-radius: 5px;
+}
+
+#new-todo{
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+#input-todo{
+    width: 80%;
+    height: 50%;
+    font-size: 16px;
+    color: var(--light-grayish-blue);
+    background: transparent;
+    border: none;
+}
+
+#input-todo:focus{
+    outline: none;
+}
+
+.task{
+    width: 100%;
+    height: 65px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--dark-grayish-blue);
+    background: var(--very-dark-desaturated-blue);
+}
+
+.task:nth-child(1){
+    border-radius: 5px 5px 0px 0px;
+}
+
+.task .text-content{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.task span{
+    width: 25px;
+    height: 25px;
+    margin: 0px 25px;
+    position: relative;
+    border-radius: 50%;
+    border: 1px solid var(--dark-grayish-blue);
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.task .check{
+    position: absolute;
+    top: 7px;
+    left: 6px;
+}
+
+.visible{
+    display: none;
+}
+
+.bg{
+    background: var(--check-background);
+}
+
+.task p{
+    color: var(--light-grayish-blue);
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.outline{
+    text-decoration: line-through;
+    color: var(--dark-grayish-blue) !important;
+}
+
+.task .cross{
+    margin: 0px 15px;
+    opacity: 0;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.task:hover .cross{
+    opacity: 1;
+}
+
+.todo-footer{
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: none;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.todo-footer p{
+    font-size: 17px;
+    color: var(--dark-grayish-blue);
+    flex-grow: 0;
+}
+
+.todo-footer > p{
+    cursor: auto;
+}
+
+.todo-footer div > p:hover{
+    color: var(--very-dark-grayish-blue);
+}
+
+.todo-footer .btn-center > p{
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+.todo-footer .btn-center > .selected{
+    color: var(--bright-blue);
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    padding: 25px 0px;
+    text-align: center;
+    background: var(--very-dark-blue);
+}
+
+footer p{
+    color: var(--light-grayish-blue);
+    margin: 5px 0px;
+}
+
+footer a{
+    color: var(--bright-blue);
+}
+
+@media (max-width: 600px) {
+    body{
+        font-size: 15px;
+    }
+
+    #header-container{
+        width: 90%;
+    }
+
+    #todo{
+        width: 90%;
+    }
+
+    #input-todo{
+        font-size: 15px;
+    }
+
+    .todo-footer p{
+        font-size: 15px;
+    }
+
+    .btn-center{
+        position: absolute;
+        bottom: -100px;
+        left: 0;
+        width: 100%;
+        height: 65px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 5px; 
+        background: var(--very-dark-desaturated-blue); 
+    }
+
+    .btn-center > p{
+        font-weight: bold;
+    }
+}

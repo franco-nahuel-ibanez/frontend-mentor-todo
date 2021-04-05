@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+   <!--styles  -->
+  <link class="styles" rel="stylesheet" href="styles-dark.css">
+  <title>Frontend Mentor | Todo app</title>
+
+</head>
+<body>
+
+  <header>
+    <div id="header-container">
+      <h1>Todo</h1>
+
+      <div>
+        <img class="icon" data-filter="light" src="./images/icon-sun.svg" alt="icon-sun" />
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div id="todo">
+      <div id="new-todo" class="task">
+        <span></span>
+        <input id="input-todo" type="text" placeholder="Create a new todo..."/>
+      </div>
+
+      <div class="task-content"></div>
+
+      <div class="todo-footer task">
+        
+        <p class="item">item left</p>
+        
+        <div class="btn-center">
+          <p class="all selected btn">All</p>
+        
+          <p class="active btn">Active</p>
+
+          <p class="completed btn">Completed</p>
+        </div>
+
+        <div>
+          <p class="clear">Clear Completed</p>
+        </div>
+
+      </div>
+      
+    </div>
+  </section>
+  
+  <footer>
+    <div class="attribution">
+      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p> 
+      
+      
+      <p>Coded by <a href="#">Franco Ibañez</a>.</p>
+    </div>
+  </footer>
+  
+  <template class="template">
+    <div class="task" data-filter="">
+      <div class="text-content">
+        <span class="circle">
+          <img class="check visible" src="./images/icon-check.svg" alt="check" />
+        </span>
+        <p class="text"></p>
+
+      </div>
+
+      <img class="cross" src="./images/icon-cross.svg" alt="icon-cross" />
+    </div>
+  </template>
+
+
+
+
+  <!-- javascript -->
+  <script src="./app.js"></script>
+</body>
+</html>

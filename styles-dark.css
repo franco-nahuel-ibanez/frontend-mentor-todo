@@ -48,6 +48,7 @@ header{
 
 section{
     background: var(--very-dark-blue);
+    min-height: 250px;
 }
 
 #todo{
